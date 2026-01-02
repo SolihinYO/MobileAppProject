@@ -1,76 +1,135 @@
-# TaskifyU – Student Task Management Mobile Application
-Introduction
+# 📱 TaskifyU – Student Task Management Mobile Application
 
-University students often face difficulties in managing academic assignments, deadlines, and daily tasks due to tight schedules and poor task organization. While many task management applications exist, they are often overly complex or not specifically designed to meet students’ academic productivity needs.
+## 📌 Application Domain
+**Productivity / Utilities**
 
-TaskifyU is a simple hybrid mobile application designed to help students plan, organize, and track their academic tasks efficiently. The application focuses on usability, a clean user interface, and essential productivity features. TaskifyU allows users to manage tasks anytime and anywhere using a mobile or web-based platform built with Flutter and Firebase technologies.
+---
 
-Objectives
+## 1. Introduction
 
-To help students manage academic tasks and deadlines efficiently
-To provide a simple and user-friendly task tracking system
-To demonstrate hybrid mobile/web app development using Flutter Web
-To integrate Firebase services for authentication and data storage
+University students often struggle to manage assignments, deadlines, and daily academic tasks efficiently due to tight schedules and poor organization. Many existing task management applications are either overly complex or not specifically designed for student productivity.
 
-Target Users
+TaskifyU is a simple hybrid mobile application developed to help students plan, organize, and track their academic tasks effectively. The application focuses on usability, clean user interface design, and essential productivity features. TaskifyU is built using Flutter and Firebase, allowing users to manage tasks anytime and anywhere through a mobile or web-based platform.
 
-University students
-College students
-Any individual who needs simple task planning
+---
 
-Features & Functionalities
+## 2. Problem Statement
 
-Core Features
+University students often face difficulties in managing multiple academic tasks and deadlines simultaneously. The lack of simple, student-focused task management tools leads to poor organization, missed deadlines, and reduced productivity. Therefore, there is a need for a lightweight and user-friendly task management application that is specifically tailored to students’ academic needs.
 
-User Registration & Login (Firebase Authentication)
-Add New Tasks (title, description, due date, priority)
-Edit & Delete Tasks
-Mark Tasks as Completed
-Task List View (Pending / Completed)
+---
 
-Optional Enhancement
+## 3. Project Objectives
 
-Task filter by priority or deadline
-Simple dashboard (task count summary)
+The objectives of this project are:
 
-Proposed UI Screens
+- To help students manage academic tasks and deadlines efficiently  
+- To provide a simple and user-friendly task tracking system  
+- To demonstrate hybrid mobile/web application development using Flutter  
+- To integrate Firebase services for authentication and cloud-based data storage  
 
-Login Page
-Register Page
-Task List (Home Dashboard)
-Add / Edit Task Form
+---
 
-Architecture and Technical Design
+## 4. Target Users
 
-Framework - Flutter Web (Runs on Google Chrome only)
-State Management - setState or Provider
-Navigation - Named routes (Navigator.pushNamed)
+The target users of TaskifyU include:
 
-Firebase Integration 
+- University students  
+- College students  
+- Individuals who require simple and effective task planning  
 
-- Firebase Authentication (Email & Password)
-- Cloud Firestore (Task data storage)
+---
 
-Collection: users
-Field	Type
-uid	String
-email	String
-createdAt	Timestamp
+## 5. Features and Functionalities
 
-Collection: tasks
-Field	Type
-title	String
-description	String
-dueDate	Timestamp
-priority	String
-isCompleted	Boolean
-userId	String
+### 5.1 Core Features
 
-User Flow (Simple)
+- User registration and login using Firebase Authentication  
+- Add new tasks with title, description, due date, and priority  
+- Edit and delete existing tasks  
+- Mark tasks as completed  
+- View task list categorized by task status (Pending / Completed)  
 
-User registers / logs in
-User lands on task dashboard
-User adds a new task
-Tasks are saved to Firestore
-User updates task status
+### 5.2 Optional Enhancements
 
+- Task filtering by priority or due date  
+- Simple dashboard displaying task summary (total, completed, pending tasks)  
+
+---
+
+## 6. Proposed UI Screens
+
+- **Login Page**  
+  Allows users to log in using email and password.
+
+- **Register Page**  
+  Enables new users to create an account.
+
+- **Task List (Home Dashboard)**  
+  Displays all tasks created by the user with task status.
+
+- **Add / Edit Task Form**  
+  Allows users to create or update task details.
+
+---
+
+## 7. Architecture and Technical Design
+
+TaskifyU follows a client–cloud architecture model. The Flutter application handles the user interface and user interactions. Firebase Authentication manages user login and registration. Cloud Firestore is used to store and retrieve task data in real time.
+
+---
+
+## 8. Technology Stack
+
+- **Framework:** Flutter  
+- **Platform:** Hybrid Mobile / Web (Google Chrome & Mobile)  
+- **State Management:** Provider  
+- **Navigation:** Named Routes (`Navigator.pushNamed`)  
+- **Authentication:** Firebase Authentication (Email & Password)  
+- **Database:** Cloud Firestore  
+
+---
+
+## 9. Data Model
+
+### Collection: `users`
+
+| Field | Type |
+|------|------|
+| uid | String |
+| email | String |
+| createdAt | Timestamp |
+
+### Collection: `tasks`
+
+| Field | Type |
+|------|------|
+| title | String |
+| description | String |
+| dueDate | Timestamp |
+| priority | String |
+| isCompleted | Boolean |
+| userId | String |
+
+---
+
+## 10. User Flow (Sequence Explanation)
+
+1. User launches the application  
+2. User registers or logs into the system  
+3. User is redirected to the task dashboard  
+4. User adds a new task  
+5. Task data is stored in Cloud Firestore  
+6. Task list updates in real time  
+7. User can edit, complete, or delete tasks  
+
+---
+
+## 11. References
+
+- Flutter Official Documentation  
+- Firebase Authentication Documentation  
+- Cloud Firestore Documentation  
+- Material Design Guidelines  
+
+---
