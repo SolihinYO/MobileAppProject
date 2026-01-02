@@ -1,7 +1,9 @@
-# MobileAppProject
+# TaskifyU – Student Task Management Mobile Application
 Introduction
 
-University students often struggle to manage assignments, deadlines, and daily academic tasks efficiently. Many existing tools are either too complex or not tailored for student productivity. TaskifyU is a simple, web-based task management application designed to help students plan, organize, and track their academic tasks effectively. The system focuses on usability, clean UI, and productivity while being fully accessible through a web browser (Google Chrome).
+University students often face difficulties in managing academic assignments, deadlines, and daily tasks due to tight schedules and poor task organization. While many task management applications exist, they are often overly complex or not specifically designed to meet students’ academic productivity needs.
+
+TaskifyU is a simple hybrid mobile application designed to help students plan, organize, and track their academic tasks efficiently. The application focuses on usability, a clean user interface, and essential productivity features. TaskifyU allows users to manage tasks anytime and anywhere using a mobile or web-based platform built with Flutter and Firebase technologies.
 
 Objectives
 
@@ -38,11 +40,16 @@ Register Page
 Task List (Home Dashboard)
 Add / Edit Task Form
 
+Architecture and Technical Design
+
 Framework - Flutter Web (Runs on Google Chrome only)
 State Management - setState or Provider
 Navigation - Named routes (Navigator.pushNamed)
-Firebase Integration - Firebase Authentication (Email & Password)
-                    - Cloud Firestore (Task data storage)
+
+Firebase Integration 
+
+- Firebase Authentication (Email & Password)
+- Cloud Firestore (Task data storage)
 
 Collection: users
 Field	Type
