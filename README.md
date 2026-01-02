@@ -59,30 +59,23 @@ The target users of TaskifyU include:
 
 ## 6. Proposed UI Screens
 
-- **Login Page**  
-  Allows users to log in using email and password.
-
-- **Register Page**  
-  Enables new users to create an account.
-
-- **Task List (Home Dashboard)**  
-  Displays all tasks created by the user with task status.
-
-- **Add / Edit Task Form**  
-  Allows users to create or update task details.
+- **Login Page** – Allows users to log in using email and password  
+- **Register Page** – Enables new users to create an account  
+- **Task List (Home Dashboard)** – Displays all user tasks with status  
+- **Add / Edit Task Form** – Allows users to create or update task details  
 
 ---
 
 ## 7. Architecture and Technical Design
 
-TaskifyU follows a client–cloud architecture model. The Flutter application handles the user interface and user interactions. Firebase Authentication manages user login and registration. Cloud Firestore is used to store and retrieve task data in real time.
+TaskifyU follows a client–cloud architecture model. The Flutter application handles user interactions and UI rendering. Firebase Authentication is used to manage user login and registration securely. Cloud Firestore is used to store and retrieve task data in real time. Provider is used for state management to ensure efficient data sharing across multiple screens.
 
 ---
 
 ## 8. Technology Stack
 
 - **Framework:** Flutter  
-- **Platform:** Hybrid Mobile / Web (Google Chrome & Mobile)  
+- **Platform:** Hybrid Mobile / Web  
 - **State Management:** Provider  
 - **Navigation:** Named Routes (`Navigator.pushNamed`)  
 - **Authentication:** Firebase Authentication (Email & Password)  
@@ -113,19 +106,45 @@ TaskifyU follows a client–cloud architecture model. The Flutter application ha
 
 ---
 
-## 10. User Flow (Sequence Explanation)
+## 10. Use Case Diagram
 
-1. User launches the application  
-2. User registers or logs into the system  
-3. User is redirected to the task dashboard  
-4. User adds a new task  
-5. Task data is stored in Cloud Firestore  
-6. Task list updates in real time  
-7. User can edit, complete, or delete tasks  
+The use case diagram illustrates the interaction between the user and the TaskifyU system. Users must log in before accessing any task management functionality. Task-related operations such as viewing, adding, editing, deleting, and completing tasks include the login process to ensure secure access.
+
+📌 **Diagram:**  
+![Use Case Diagram](docs/diagrams/use_case_diagram.png)
 
 ---
 
-## 11. References
+## 11. Sequence Diagram
+
+The sequence diagram shows the interaction flow for the Add Task functionality. It demonstrates how the user interacts with the Flutter application, Firebase Authentication, and Cloud Firestore during login and task creation processes.
+
+📌 **Diagram:**  
+![Sequence Diagram](docs/diagrams/sequence_diagram.png)
+
+---
+
+## 12. Flowchart
+
+The flowchart represents the overall workflow of the TaskifyU system. It starts from user authentication and continues through task management processes such as adding, editing, saving tasks, and updating the task list.
+
+📌 **Diagram:**  
+![Flowchart](docs/diagrams/flowchart.png)
+
+---
+
+## 13. User Flow Summary
+
+1. User registers or logs into the application  
+2. System verifies authentication  
+3. User accesses the task dashboard  
+4. User adds, edits, deletes, or completes tasks  
+5. Task data is stored in Cloud Firestore  
+6. Task list updates in real time  
+
+---
+
+## 14. References
 
 - Flutter Official Documentation  
 - Firebase Authentication Documentation  
@@ -133,3 +152,7 @@ TaskifyU follows a client–cloud architecture model. The Flutter application ha
 - Material Design Guidelines  
 
 ---
+
+## 📌 Note
+
+This project is developed as part of **INFO 4335 – Mobile Application Development**, demonstrating hybrid mobile application development using Flutter and Firebase.
