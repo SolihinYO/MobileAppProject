@@ -111,7 +111,7 @@ TaskifyU follows a client–cloud architecture model. The Flutter application ha
 The use case diagram illustrates the interaction between the user and the TaskifyU system. Users must log in before accessing any task management functionality. Task-related operations such as viewing, adding, editing, deleting, and completing tasks include the login process to ensure secure access.
 
 📌 **Diagram:**  
-![Use Case Diagram](docs/diagrams/use_case_diagram.png)
+![Use Case Diagram](docs/diagrams/use_case_diagram.jpg)
 
 ---
 
@@ -120,7 +120,7 @@ The use case diagram illustrates the interaction between the user and the Taskif
 The sequence diagram shows the interaction flow for the Add Task functionality. It demonstrates how the user interacts with the Flutter application, Firebase Authentication, and Cloud Firestore during login and task creation processes.
 
 📌 **Diagram:**  
-![Sequence Diagram](docs/diagrams/sequence_diagram.png)
+![Sequence Diagram](docs/diagrams/sequence_diagram.jpg)
 
 ---
 
@@ -129,7 +129,7 @@ The sequence diagram shows the interaction flow for the Add Task functionality. 
 The flowchart represents the overall workflow of the TaskifyU system. It starts from user authentication and continues through task management processes such as adding, editing, saving tasks, and updating the task list.
 
 📌 **Diagram:**  
-![Flowchart](docs/diagrams/flowchart.png)
+![Flowchart](docs/diagrams/flowchart.jpg)
 
 ---
 
