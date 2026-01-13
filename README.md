@@ -1,158 +1,170 @@
-# 📱 TaskifyU – Student Task Management Mobile Application
+🚌 SchoolNow – Automated School Bus System (ASBS)
+📌 Application Domain
 
-## 📌 Application Domain
-**Productivity / Utilities**
+Transportation / Education Technology / Safety Management
 
----
+📖 Introduction
 
-## 1. Introduction
+School transportation services in Malaysia often rely on manual attendance recording and cash-based fare collection, which can lead to errors, delays, and safety concerns. Parents frequently lack real-time information about their child’s bus status, while administrators face difficulties managing attendance, routes, drivers, and payments efficiently.
 
-University students often struggle to manage assignments, deadlines, and daily academic tasks efficiently due to tight schedules and poor organization. Many existing task management applications are either overly complex or not specifically designed for student productivity.
+SchoolNow – Automated School Bus System (ASBS) is a mobile-based solution designed to modernize school bus operations using digital technologies. The system replaces manual processes with QR-based attendance, automated fare collection, and real-time bus tracking, ensuring safer, more efficient, and transparent school transportation management.
 
-TaskifyU is a simple hybrid mobile application developed to help students plan, organize, and track their academic tasks effectively. The application focuses on usability, clean user interface design, and essential productivity features. TaskifyU is built using Flutter and Firebase, allowing users to manage tasks anytime and anywhere through a mobile or web-based platform.
+SchoolNow is developed using Flutter and cloud-based backend services, enabling parents, students, drivers, and administrators to interact through a single integrated platform.
 
----
+❗ Problem Statement
 
-## 2. Problem Statement
+School bus services in Malaysia commonly depend on manual attendance and payment processes. These traditional methods are inefficient and prone to human error, such as incorrect attendance records, delayed updates, and missing payment information.
 
-University students often face difficulties in managing multiple academic tasks and deadlines simultaneously. The lack of simple, student-focused task management tools leads to poor organization, missed deadlines, and reduced productivity. Therefore, there is a need for a lightweight and user-friendly task management application that is specifically tailored to students’ academic needs.
+In addition, there is limited real-time communication between parents, drivers, and school administrators. Parents often cannot confirm whether their children have safely boarded or exited the bus, increasing anxiety and reducing trust in the transportation system.
 
----
+Manual fare collection also introduces risks such as lost records, incorrect payments, and difficulties in tracking service usage. Without a centralized digital platform, managing buses, routes, drivers, students, and payments becomes challenging.
 
-## 3. Project Objectives
+Therefore, there is a strong need for a digital, integrated school bus management system that enhances safety, improves efficiency, reduces human error, and provides real-time information to all stakeholders.
 
-The objectives of this project are:
+🎯 Project Objectives
 
-- To help students manage academic tasks and deadlines efficiently  
-- To provide a simple and user-friendly task tracking system  
-- To demonstrate hybrid mobile/web application development using Flutter  
-- To integrate Firebase services for authentication and cloud-based data storage  
+The main objective of this project is to design and develop a mobile-based Automated School Bus System (ASBS) that improves the safety, efficiency, and reliability of school transportation services.
 
----
+Specific objectives include:
 
-## 4. Target Users
+To implement a QR-based tap-in and tap-out system for accurate student attendance tracking
 
-The target users of TaskifyU include:
+To provide real-time bus location and trip status for parents
 
-- University students  
-- College students  
-- Individuals who require simple and effective task planning  
+To enable digital fare collection and payment tracking
 
----
+To support bus drivers with student pickup lists, routes, and trip records
 
-## 5. Features and Functionalities
+To allow administrators to manage buses, drivers, students, routes, attendance, and payments from a centralized system
 
-### 5.1 Core Features
+👥 Target Users
 
-- User registration and login using Firebase Authentication  
-- Add new tasks with title, description, due date, and priority  
-- Edit and delete existing tasks  
-- Mark tasks as completed  
-- View task list categorized by task status (Pending / Completed)  
+Parents
 
-### 5.2 Optional Enhancements
+Students
 
-- Task filtering by priority or due date  
-- Simple dashboard displaying task summary (total, completed, pending tasks)  
+Bus Drivers
 
----
+School Transportation Administrators
 
-## 6. Proposed UI Screens
+⚙️ Features & Functionalities
+🔹 Core Features
+👨‍👩‍👧 Parent & Student
 
-- **Login Page** – Allows users to log in using email and password  
-- **Register Page** – Enables new users to create an account  
-- **Task List (Home Dashboard)** – Displays all user tasks with status  
-- **Add / Edit Task Form** – Allows users to create or update task details  
+Student registration
 
----
+Bus route booking and subscription
 
-## 7. Architecture and Technical Design
+Digital student bus pass (QR code)
 
-TaskifyU follows a client–cloud architecture model. The Flutter application handles user interactions and UI rendering. Firebase Authentication is used to manage user login and registration securely. Cloud Firestore is used to store and retrieve task data in real time. Provider is used for state management to ensure efficient data sharing across multiple screens.
+QR-based tap-in / tap-out attendance
 
----
+Real-time trip status updates
 
-## 8. Technology Stack
+Live bus location tracking (Google Maps integration)
 
-- **Framework:** Flutter  
-- **Platform:** Hybrid Mobile / Web  
-- **State Management:** Provider  
-- **Navigation:** Named Routes (`Navigator.pushNamed`)  
-- **Authentication:** Firebase Authentication (Email & Password)  
-- **Database:** Cloud Firestore  
+Digital payment and fare records
 
----
+🚍 Driver
 
-## 9. Data Model
+View assigned routes and students
 
-### Collection: `users`
+Scan student QR codes
 
-| Field | Type |
-|------|------|
-| uid | String |
-| email | String |
-| createdAt | Timestamp |
+Update trip status
 
-### Collection: `tasks`
+Share live bus location
 
-| Field | Type |
-|------|------|
-| title | String |
-| description | String |
-| dueDate | Timestamp |
-| priority | String |
-| isCompleted | Boolean |
-| userId | String |
+🧑‍💼 Administrator
 
----
+Add and manage drivers
 
-## 10. Use Case Diagram
+Add and manage buses
 
-The use case diagram illustrates the interaction between the user and the TaskifyU system. Users must log in before accessing any task management functionality. Task-related operations such as viewing, adding, editing, deleting, and completing tasks include the login process to ensure secure access.
+Configure bus routes and fares
 
-📌 **Diagram:**  
-![Use Case Diagram](docs/diagrams/use_case_diagram.jpg)
+Monitor student attendance
 
----
+Manage bookings and payments
 
-## 11. Sequence Diagram
+Oversee all system data centrally
 
-The sequence diagram shows the interaction flow for the Add Task functionality. It demonstrates how the user interacts with the Flutter application, Firebase Authentication, and Cloud Firestore during login and task creation processes.
+🧩 System Architecture
 
-📌 **Diagram:**  
-![Sequence Diagram](docs/diagrams/sequence_diagram.jpg)
+SchoolNow follows a client–cloud architecture:
 
----
+Frontend: Flutter mobile application
 
-## 12. Flowchart
+Backend: Cloud-based authentication and database
 
-The flowchart represents the overall workflow of the TaskifyU system. It starts from user authentication and continues through task management processes such as adding, editing, saving tasks, and updating the task list.
+QR Code System: Used for attendance verification
 
-📌 **Diagram:**  
-![Flowchart](docs/diagrams/flowchart.jpg)
+Maps Integration: Real-time bus tracking using map services
 
----
+All user roles access the system through the same mobile application with role-based access control.
 
-## 13. User Flow Summary
+🛠️ Technology Stack
 
-1. User registers or logs into the application  
-2. System verifies authentication  
-3. User accesses the task dashboard  
-4. User adds, edits, deletes, or completes tasks  
-5. Task data is stored in Cloud Firestore  
-6. Task list updates in real time  
+Framework: Flutter
 
----
+Platform: Hybrid Mobile Application (Android / iOS)
 
-## 14. References
+Programming Language: Dart
 
-- Flutter Official Documentation  
-- Firebase Authentication Documentation  
-- Cloud Firestore Documentation  
-- Material Design Guidelines  
+Backend: Cloud-based database & authentication
 
----
+QR Technology: QR code scanning for attendance
 
-## 📌 Note
+Maps: Google Maps API (live location tracking)
 
-This project is developed as part of **INFO 4335 – Mobile Application Development**, demonstrating hybrid mobile application development using Flutter and Firebase.
+🗂️ Application Screens
+
+Login Screen (Role-based access)
+
+Parent Registration
+
+Student Registration
+
+Bus Booking Screen
+
+Digital Student Bus Pass (QR Code)
+
+Trip Status Screen
+
+Live Bus Location Screen
+
+Admin Dashboard
+
+Add Driver / Bus / Route Screens
+
+Attendance Monitoring Screen
+
+Booking Management Screen
+
+🔁 User Flow Summary
+
+User logs in based on role (Parent / Student / Driver / Admin)
+
+Parents register students and book bus routes
+
+Students receive a digital QR bus pass
+
+Drivers scan QR codes during boarding and alighting
+
+Attendance and trip status update automatically
+
+Parents monitor trips and bus location in real time
+
+Administrators manage all data centrally
+
+🌍 Sustainable Development Goals (SDG)
+
+SDG 4 – Quality Education
+Supports student safety and punctual access to education
+
+SDG 9 – Industry, Innovation & Infrastructure
+Promotes digital innovation in transportation systems
+
+📌 Note
+
+SchoolNow (ASBS) demonstrates how mobile technology, automated fare collection, and real-time tracking can be combined to improve school transportation safety, efficiency, and transparency in Malaysia.
