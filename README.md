@@ -134,16 +134,6 @@ Role-based access control ensures each user only accesses relevant features.
 
 ---
 
-## 📚 Course Information
-
-This project is developed for:
-
-**ISB46903 – Automated Fare Collection Technology**  
-Bachelor of Information Technology (Hons) Software Engineering  
-Malaysian Institute of Information Technology  
-
----
-
 ## 📌 Conclusion
 
 SchoolNow (ASBS) demonstrates how mobile technology, automated fare collection, and real-time tracking can be integrated to create a safer, more efficient, and transparent school transportation system for Malaysia.
