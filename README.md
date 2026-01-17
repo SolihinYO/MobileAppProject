@@ -1,139 +1,143 @@
 # 🚌 SchoolNow – Automated School Bus System (ASBS)
-
-## 📌 Application Domain
-Transportation • Education Technology • Safety Management
+Final Project Report (README.md)
 
 ---
 
-## 📖 Introduction
+## 📌 Project Overview
 
-School transportation services in Malaysia often rely on manual attendance tracking and cash-based fare collection. These traditional methods are inefficient, prone to human error, and provide limited visibility for parents regarding their children’s safety during daily school commutes.
+**SchoolNow** is a mobile-based Automated School Bus System (ASBS) developed to improve
+student safety, attendance accuracy, and fare management for school transportation services
+in Malaysia.  
+The system replaces manual processes with **QR-based attendance**, **automated fare records**,
+and **real-time bus tracking**.
 
-**SchoolNow – Automated School Bus System (ASBS)** is a mobile-based application designed to modernize school bus operations by replacing manual processes with a digital, automated solution. The system integrates **QR-based attendance**, **automated fare collection**, and **real-time bus tracking** to improve safety, efficiency, and transparency for all stakeholders.
-
-SchoolNow is developed using **Flutter**, allowing the application to run smoothly across multiple platforms while maintaining a user-friendly interface for parents, students, drivers, and administrators.
-
----
-
-## ❗ Problem Statement
-
-School bus services in Malaysia commonly depend on manual methods for recording student attendance and managing transportation fees. These processes are inefficient and often result in inaccurate records, delayed updates, and missing information.
-
-Parents usually lack real-time confirmation of whether their children have safely boarded or exited the bus. This absence of visibility causes anxiety and reduces trust in the transportation system. Additionally, manual fare collection increases the risk of payment errors, lost records, and difficulty in monitoring service usage.
-
-Without a centralized digital system, administrators face challenges in managing buses, drivers, routes, students, attendance, and payments efficiently. Therefore, a comprehensive digital solution is required to improve safety, reduce human error, and provide real-time information to all users.
+This README reflects the **FINAL IMPLEMENTATION** of the project.
 
 ---
 
-## 🎯 Project Objectives
+## 📱 Final UI Screenshots
 
-The main objective of this project is to develop a **mobile-based Automated School Bus System (ASBS)** that enhances the safety, efficiency, and reliability of school transportation services.
+> 📌 Replace image paths with your actual screenshots inside `/screenshots/`
 
-The specific objectives are:
-- To implement a **QR-based tap-in and tap-out system** for accurate student attendance tracking  
-- To provide **real-time trip status and bus location updates** for parents  
-- To enable **digital fare collection and payment monitoring**  
-- To assist drivers with route details, student pickup lists, and trip records  
-- To allow administrators to manage buses, drivers, students, routes, attendance, and payments through a centralized platform  
+### 🔐 Login Screen (Role-based)
+![Login Screen](screenshots/login.png)
+
+### 👨‍👩‍👧 Parent Dashboard
+![Parent Home](screenshots/parent_home.png)
+
+### 🧑‍🎓 Student QR Bus Pass
+![Student QR](screenshots/student_qr.png)
+
+### 🚍 Driver QR Scanner
+![QR Scanner](screenshots/qr_scanner.png)
+
+### 🗺️ Live Bus Location Tracking
+![Live Location](screenshots/live_location.png)
+
+### 🧑‍💼 Admin – Manage Drivers
+![Add Driver](screenshots/add_driver.png)
+
+### 🧑‍💼 Admin – Manage Routes
+![Add Route](screenshots/add_route.png)
 
 ---
 
-## 👥 Target Users
-
-- Parents  
-- Students  
-- Bus Drivers  
-- School Transportation Administrators  
-
----
-
-## ⚙️ Features & Functionalities
+## ✅ Summary of Achieved Features
 
 ### 👨‍👩‍👧 Parent & Student
 - Student registration
 - Bus route booking and subscription
 - Digital student bus pass (QR code)
 - QR-based tap-in and tap-out attendance
-- Real-time trip status notifications
+- Real-time trip status (On Board / Completed)
 - Live bus location tracking
-- Digital fare payment records
+- Digital fare and booking records
 
 ### 🚍 Driver
-- View assigned routes and student lists
-- Scan student QR codes during boarding and alighting
+- Role-based login
+- View assigned routes and students
+- Scan student QR codes for attendance
 - Update trip status
 - Share live bus location
 
 ### 🧑‍💼 Administrator
 - Add and manage drivers
 - Add and manage buses
-- Configure routes and fares
-- Monitor student attendance
-- Manage bookings and payments
-- Oversee all transportation data centrally
+- Create and manage routes
+- Monitor student attendance records
+- View and manage student bookings
+- Centralized system control
 
 ---
 
-## 🧩 System Architecture
+## 🛠️ Technical Explanation
 
+### 🔹 System Architecture
 SchoolNow follows a **client–cloud architecture**:
-- **Frontend:** Flutter mobile application  
-- **Backend:** Cloud-based authentication and database  
-- **QR System:** Used for student identification and attendance  
-- **Maps Integration:** Real-time bus tracking via Google Maps  
+- **Frontend:** Flutter mobile application
+- **Backend:** Cloud-based database & authentication
+- **QR System:** Used for student attendance verification
+- **Maps Integration:** Google Maps for real-time bus tracking
 
-Role-based access control ensures each user only accesses relevant features.
+### 🔹 Technology Stack
+- **Framework:** Flutter
+- **Language:** Dart
+- **Platform:** Hybrid Mobile Application (Android)
+- **Backend:** Cloud database & authentication
+- **QR Scanner:** Camera-based QR scanning
+- **Maps:** Google Maps API
 
----
+### 🔹 Authentication & Access Control
+- Role-based login (Admin, Driver, Parent, Student)
+- Access to features restricted by user role
+- Secure login using email and password
 
-## 🛠️ Technology Stack
+### 🔹 Attendance System
+- Each student is assigned a unique QR code
+- QR scanned during boarding and alighting
+- Attendance recorded automatically in database
+- Reduces human error and manual record keeping
 
-- **Framework:** Flutter  
-- **Platform:** Hybrid Mobile Application (Android & iOS)  
-- **Language:** Dart  
-- **Backend:** Cloud-based database & authentication services  
-- **QR Technology:** QR code scanning for attendance  
-- **Maps:** Google Maps API  
-
----
-
-## 📱 Application Screens
-
-- Login (Role-based)
-- Parent & Student Registration
-- Bus Booking Screen
-- Digital Student Bus Pass (QR)
-- Trip Status Screen
-- Live Bus Location Screen
-- Admin Dashboard
-- Add Driver / Bus / Route Screens
-- Attendance Monitoring Screen
-- Booking Management Screen
+### 🔹 Live Tracking
+- Bus location updated in real time
+- Parents can view live bus movement on map
+- Improves safety and transparency
 
 ---
 
-## 🔁 User Flow Summary
+## ⚠️ Limitations
 
-1. User logs in according to role  
-2. Parents register students and book bus routes  
-3. Students receive a digital QR bus pass  
-4. Drivers scan QR codes during boarding and drop-off  
-5. Attendance and trip status update automatically  
-6. Parents track trips and bus location in real time  
-7. Administrators manage all system data centrally  
+- Payment gateway is simulated (no real online payment integration)
+- System currently supports **single-school deployment**
+- Internet connection is required for live tracking
+- Limited analytics and reporting features
+- No push notification alerts implemented
 
 ---
 
-## 🌍 Sustainable Development Goals (SDG)
+## 🚀 Future Enhancements
 
-- **SDG 4 – Quality Education**  
-  Enhances student safety and punctual access to education  
-
-- **SDG 9 – Industry, Innovation & Infrastructure**  
-  Encourages digital innovation in transportation systems  
+- Integration with real online payment gateways (e-wallet / card)
+- Push notification alerts for parents
+- Advanced attendance and payment analytics
+- Multi-school and district-level support
+- Driver performance and route optimization
+- iOS deployment support
 
 ---
 
-## 📌 Conclusion
+## 📚 Course Information
 
-SchoolNow (ASBS) demonstrates how mobile technology, automated fare collection, and real-time tracking can be integrated to create a safer, more efficient, and transparent school transportation system for Malaysia.
+**Course:** ISB46903 – Automated Fare Collection Technology  
+**Programme:** Bachelor of Information Technology (Hons) Software Engineering  
+**Institution:** Malaysian Institute of Information Technology  
+
+---
+
+## 📌 Final Note
+
+This README.md reflects the **FINAL implemented version** of the SchoolNow system.
+All features listed above are functional and demonstrated during the final presentation.
+
+> **Non-updated README = NO submission**  
+> ✅ This README is FINAL and ready for evaluation.
