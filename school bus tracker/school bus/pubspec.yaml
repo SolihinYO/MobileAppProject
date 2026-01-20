@@ -1,0 +1,43 @@
+name: afc
+description: "A new School Bus System project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ikon asas iOS
+  cupertino_icons: ^1.0.8
+
+  # --- LIBRARY UNTUK QR CODE ---
+  # Untuk buka kamera dan scan QR
+  mobile_scanner: ^7.1.4
+  # Untuk buat/generate QR code (Paparan Student)
+  qr_flutter: ^4.1.0
+
+  # --- LIBRARY UNTUK DATABASE (FIREBASE) ---
+  # Core Firebase
+  firebase_core: ^3.0.0
+  # Database real-time untuk simpan kehadiran, data pemandu, & bas
+  cloud_firestore: ^5.0.0
+  google_maps_flutter: ^2.5.0
+  geolocator: ^14.0.2
+  supabase_flutter: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  # Pastikan ini true untuk guna icon Material seperti Icons.directions_bus
+  uses-material-design: true
+
+  # Jika anda ada gambar logo sekolah, letak di sini nanti
+  # assets:
+  #   - assets/images/logo.png

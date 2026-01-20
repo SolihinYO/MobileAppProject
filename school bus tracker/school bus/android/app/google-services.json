@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "760351601294",
+    "project_id": "school-bus-afc",
+    "storage_bucket": "school-bus-afc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760351601294:android:61743f715425b8284ccfdf",
+        "android_client_info": {
+          "package_name": "com.example.afc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpzV8iNyP70tvPXOBKJJ36WbflZa_Orfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
