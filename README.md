@@ -177,9 +177,22 @@ This ensures centralized attendance monitoring and reliable transportation recor
 
 ## 7. Technical Explanation
 
-SchoolNow follows a **client–cloud architecture**. The frontend is developed using **Flutter**, while backend services handle authentication, data storage, and real-time updates. QR code technology is used for attendance verification, and map services support live tracking.
+The SchoolNow – Automated School Bus System (ASBS) is developed using a client–cloud architecture that separates user interface logic from backend data management. This architectural approach improves scalability, maintainability, and real-time data synchronization across different user roles. The frontend of the system is implemented as a mobile application, while backend services handle authentication, data storage, and real-time updates.
 
-Role-based access control ensures secure and appropriate feature access.
+The mobile application is developed using the **Flutter framework**, which enables cross-platform development using a single codebase. Flutter’s widget-based architecture allows the user interface to be modular, responsive, and easy to maintain. The application is structured according to user roles, ensuring that parents, students, drivers, and administrators each access only the features relevant to their responsibilities. Navigation between screens is managed using Flutter’s routing mechanism to ensure smooth and controlled transitions.
+
+User authentication is implemented using a secure email and password mechanism. Upon successful login, the system identifies the user role and redirects the user to the appropriate dashboard. Role-based access control is enforced at both the interface and data access levels to prevent unauthorized access to restricted system functions.
+
+For data management, the system utilizes cloud-based backend services to store and retrieve information such as user profiles, student records, bus routes, bookings, attendance data, and trip status updates. All data is stored in a centralized database, enabling real-time synchronization across multiple devices. This ensures that when a driver scans a student’s QR code, attendance records and trip status updates are immediately reflected in the parent and administrator interfaces.
+
+The QR-based attendance mechanism is a core technical component of the system. Each registered student is assigned a unique QR code that functions as a digital bus pass. During boarding and alighting, the bus driver scans the QR code using the mobile application. The scanned data is verified by the system and recorded in the database as a tap-in or tap-out event. This automated process eliminates manual attendance recording and significantly reduces human error.
+
+Real-time bus tracking is implemented through map integration within the mobile application. When a driver starts a trip, the application begins sharing the bus’s live location data. This data is transmitted to the backend and displayed on the parent interface using map visualization. Parents can view the current location of the bus and monitor trip progress throughout the journey. This feature enhances safety and transparency in school transportation services.
+
+The booking and fare management module allows parents to subscribe to bus services by selecting routes, buses, drivers, and subscription duration. The system automatically calculates fare amounts based on predefined route pricing and subscription length. Although the current implementation uses simulated payment records, the architecture is designed to support future integration with real online payment gateways.
+
+Overall, the technical implementation of SchoolNow demonstrates the effective use of mobile application development frameworks, cloud-based data services, and automated attendance technologies. The system architecture supports real-time updates, secure access control, and modular expansion, making it suitable for further enhancement and real-world deployment.
+
 
 ---
 
