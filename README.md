@@ -49,27 +49,27 @@ Bus drivers use the system to start trips, scan student QR codes, and share live
 
 ### 6.1 Login Page
 
-![Login Page](docs/diagrams/login page.png)
+![Login Page](docs/diagrams/login_page.png)
 
-The login page serves as the main entry point of the SchoolNow application. It provides role-based authentication for administrators, drivers, students, and parents using email and password credentials. Each role has a dedicated login option to ensure that users are redirected to the appropriate dashboard.
+The login page serves as the main entry point of the SchoolNow application. It provides role-based authentication for administrators, drivers, students, and parents using email and password credentials. Each role is given a dedicated login option to ensure that users are directed to the correct dashboard after authentication.
 
-This design enhances system security while simplifying the user experience by ensuring that users only access features relevant to their role.
+This design improves system security and usability by ensuring that users only access features relevant to their assigned role.
 
 ---
 
 ### 6.2 Driver & Admin Dashboard
 
-![Dashboard Admin](docs/diagrams/dashboard admin.png)
+![Dashboard Admin](docs/diagrams/dashboard_admin.png)
 
-The Driver & Admin Dashboard functions as the central control panel for both drivers and administrators. Drivers can start trips and scan student QR codes, while administrators can access management features such as adding drivers and buses.
+The Driver & Admin Dashboard functions as the central control panel for both drivers and administrators. Drivers can start trips and scan student QR codes, while administrators can access management features such as adding drivers, buses, and routes.
 
-This unified dashboard reduces interface complexity while supporting multiple operational roles within the system.
+This unified dashboard design reduces interface complexity while supporting multiple operational roles within the system.
 
 ---
 
 ### 6.3 Add New Driver Screen
 
-![Add New Driver](docs/diagrams/add new driver.png)
+![Add New Driver](docs/diagrams/add_new_driver.png)
 
 This screen allows administrators to register new bus drivers by entering details such as full name, phone number, and license number. All driver information is stored centrally within the system.
 
@@ -79,17 +79,17 @@ Digitizing driver registration improves fleet management and ensures that only v
 
 ### 6.4 Add New Bus Screen
 
-![Add New Bus](docs/diagrams/add new bus.png)
+![Add New Bus](docs/diagrams/add_new_bus.png)
 
 The Add New Bus screen enables administrators to register buses by entering the plate number, seating capacity, bus type, and assigned driver.
 
-This feature allows efficient fleet organization and ensures proper assignment of buses to routes and drivers.
+This feature ensures efficient fleet organization and proper assignment of buses to routes and drivers.
 
 ---
 
 ### 6.5 Add New Bus Route Screen
 
-![Add New Route](docs/diagrams/add new route.png)
+![Add New Route](docs/diagrams/add_new_route.png)
 
 Administrators use this screen to define transportation routes by entering route name, start location, end location, estimated travel time, and fare price.
 
@@ -99,67 +99,67 @@ Centralized route management supports accurate fare calculation and effective ro
 
 ### 6.6 Student Bus Booking Screen
 
-![Bus Booking](docs/diagrams/bus booking.jpeg)
+![Bus Booking](docs/diagrams/bus_booking.jpeg)
 
 Parents use this screen to book bus services for their children by selecting the registered child, route, driver, bus, and subscription duration. The system automatically calculates the total fare.
 
-This simplifies the booking process and ensures accurate and consistent transportation records.
+This simplifies the booking process and ensures accurate transportation records.
 
 ---
 
 ### 6.7 View Student Bookings
 
-![View Booking](docs/diagrams/view booking.png)
+![View Booking](docs/diagrams/view_booking.png)
 
-This screen displays all student bookings, including route, duration, fare, and booking status. It is used by administrators and drivers to monitor transportation demand and booking records.
+This screen displays all student bookings, including route details, subscription duration, fare amount, and booking status. It is used by administrators and drivers to monitor transportation demand.
 
 ---
 
 ### 6.8 Student Bus Pass (QR Code)
 
-![Student QR](docs/diagrams/parent - student bas pass (QR).jpeg)
+![Student QR](docs/diagrams/parent_student_bus_pass_qr.jpeg)
 
-Each student is assigned a unique QR code that functions as a digital bus pass. The QR code is shown to the driver during boarding and alighting.
+Each student is assigned a unique QR code that functions as a digital bus pass. The QR code is displayed during boarding and alighting for attendance verification.
 
-This QR-based identification replaces manual attendance taking and supports automated attendance tracking.
+This QR-based mechanism replaces manual attendance taking and improves accuracy and efficiency.
 
 ---
 
 ### 6.9 Scan Student QR Screen
 
-![Scan Student QR](docs/diagrams/qr code.png)
+![Scan Student QR](docs/diagrams/qr_code.png)
 
-Bus drivers use this screen to scan student QR codes. Upon successful scanning, attendance data is automatically recorded and synchronized with the system.
+Bus drivers use this screen to scan student QR codes during boarding and drop-off. Attendance records are automatically updated in the system after each scan.
 
-This automation reduces human error and ensures accurate tap-in and tap-out attendance tracking.
+This automation reduces human error and ensures accurate tap-in and tap-out tracking.
 
 ---
 
 ### 6.10 Trip Status Screen (Parent)
 
-![Trip Status](docs/diagrams/parent - trip status.jpeg)
+![Trip Status](docs/diagrams/parent_trip_status.jpeg)
 
 The Trip Status screen allows parents to view their child’s current transportation status, such as “On Board (In Bus),” along with the last updated timestamp.
 
-This feature provides transparency and reassures parents regarding their child’s safety.
+This feature improves transparency and reassures parents about their child’s safety.
 
 ---
 
 ### 6.11 Live Bus Tracking Screen
 
-![Live Tracking](docs/diagrams/parent bus live tracking.jpeg)
+![Live Tracking](docs/diagrams/parent_bus_live_tracking.jpeg)
 
-This screen displays the real-time location of the bus using map integration. Parents can monitor the bus movement during pickup and drop-off.
+This screen displays the real-time location of the bus using map integration. Parents can monitor the bus’s movement during pickup and drop-off times.
 
-Live tracking improves safety and reduces uncertainty for parents.
+Live tracking enhances student safety and reduces uncertainty.
 
 ---
 
-### 6.12 Student Registration Screen
+### 6.12 New Student Registration Screen
 
-![Student Registration](docs/diagrams/parent - new student registration.jpeg)
+![Student Registration](docs/diagrams/parent_new_student_registration.jpeg)
 
-Parents use this screen to register their children by entering personal details and login credentials.
+Parents use this screen to register their children by entering personal details such as name, age, login email, and password. Once registered, the student is linked to transportation services in the system.
 
 This digital registration process eliminates paperwork and improves data accuracy.
 
@@ -167,7 +167,7 @@ This digital registration process eliminates paperwork and improves data accurac
 
 ### 6.13 Check Student Attendance (Admin)
 
-![Check Attendance](docs/diagrams/check student attendance.png)
+![Check Attendance](docs/diagrams/check_student_attendance.png)
 
 Administrators use this screen to view student attendance records based on QR scanning activities.
 
@@ -175,15 +175,6 @@ This ensures centralized attendance monitoring and reliable transportation recor
 
 ---
 
-## 7. System Design Diagrams and Explanation
-
-### 7.1 Use Case Diagram
-
-![Use Case Diagram](docs/diagrams/use_case_diagram.jpg)
-
-The use case diagram illustrates interactions between users and system functions, clearly defining the responsibilities of parents, students, drivers, and administrators.
-
----
 
 ### 7.2 Sequence Diagram
 
