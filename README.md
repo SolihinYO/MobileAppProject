@@ -5,149 +5,222 @@
 
 ## 1. Introduction
 
-School transportation services play an important role in ensuring that students travel safely and efficiently between home and school. In Malaysia, many school bus services still rely on manual processes such as handwritten attendance records and cash-based fare collection. These traditional methods are inefficient, prone to human error, and provide limited visibility for parents regarding their children’s daily travel status.
+School transportation services play an important role in ensuring that students travel safely and arrive at school on time. In Malaysia, many school bus services still rely on manual processes such as handwritten attendance records and cash-based fare collection. These traditional approaches are inefficient, prone to human error, and provide limited visibility for parents regarding their children’s daily transportation activities.
 
-The **Automated School Bus System (ASBS)**, also known as **SchoolNow**, is a mobile-based application developed to address these issues by replacing manual processes with a digital and automated solution. The system integrates QR-based attendance tracking, automated fare records, and real-time bus location monitoring to improve safety, efficiency, and transparency for all stakeholders involved.
+The **Automated School Bus System (ASBS)**, known as **SchoolNow**, is a mobile-based application developed to address these challenges by replacing manual processes with a digital and automated solution. The system integrates **QR-based attendance tracking**, **digital bus booking**, and **real-time bus location tracking** to enhance safety, efficiency, and transparency for parents, students, bus drivers, and administrators.
 
-SchoolNow is developed using the Flutter framework, allowing the application to operate as a hybrid mobile application. This enables a consistent and user-friendly experience across devices while supporting different user roles such as parents, students, bus drivers, and administrators.
+This document serves as the **FINAL PROJECT REPORT** and reflects the **final implemented version** of the SchoolNow system, as required for project submission.
 
 ---
 
 ## 2. Application Domain
 
-The SchoolNow system falls under the domains of **Transportation**, **Education Technology**, and **Safety Management**. It combines mobile technology with automated fare collection principles to improve the management of school transportation services and enhance student safety.
+The SchoolNow system operates within the domains of **Transportation**, **Education Technology**, and **Safety Management**. By combining mobile application technology with automated fare collection concepts, the system improves school transportation management while prioritizing student safety and operational efficiency.
 
 ---
 
 ## 3. Problem Statement
 
-School bus transportation services in Malaysia commonly depend on manual methods for recording student attendance and managing transportation fees. These processes are inefficient and often result in inaccurate records, delayed updates, and missing information. Parents usually lack real-time confirmation of whether their children have safely boarded or exited the bus, which can cause anxiety and reduce trust in the transportation system.
+School bus transportation services in Malaysia commonly depend on manual methods for recording student attendance and managing transportation fees. These methods are inefficient and often result in inaccurate records, delayed updates, and missing information. Parents usually lack real-time confirmation of whether their children have safely boarded or exited the bus, which can cause anxiety and reduce trust in transportation services.
 
-In addition, fare collection is typically handled through cash payments or informal record-keeping. This increases the risk of payment errors, lost records, and difficulties in tracking service usage. School administrators also face challenges in managing buses, drivers, routes, students, attendance, and payments due to the absence of a centralized digital platform.
+Additionally, fare collection is typically handled through cash payments or informal record-keeping, increasing the risk of payment errors and lost records. School administrators also face difficulties managing buses, drivers, routes, students, attendance, and bookings due to the absence of a centralized digital platform.
 
-Therefore, there is a clear need for an integrated digital system that improves student safety, reduces human error, enhances operational efficiency, and provides real-time information to all stakeholders involved in school transportation services.
+Therefore, there is a strong need for an integrated digital system that improves student safety, reduces human error, enhances operational efficiency, and provides real-time information to all stakeholders involved in school transportation services.
 
 ---
 
 ## 4. Project Objectives
 
-The main objective of this project is to design and develop a mobile-based Automated School Bus System that improves the safety, efficiency, and reliability of school transportation services.
+The main objective of this project is to design and develop a **mobile-based Automated School Bus System** that improves the safety, efficiency, and reliability of school transportation services.
 
-Specifically, the system aims to implement a digital attendance mechanism using QR codes, provide real-time bus tracking for parents, enable digital booking and fare records, assist drivers with route and student management, and allow administrators to oversee all transportation operations through a centralized system.
+Specifically, the system aims to implement QR-based student attendance tracking, provide real-time bus status and location updates, enable digital booking and fare records, assist drivers with trip and attendance management, and allow administrators to manage transportation operations through a centralized platform.
 
 ---
 
 ## 5. System Overview
 
-SchoolNow is designed as a role-based mobile application where each user accesses the system according to their assigned role. Parents are able to register students, book bus routes, view attendance records, and track the bus location in real time. Students are provided with a digital QR bus pass that is used for attendance verification during boarding and alighting.
+SchoolNow is a role-based mobile application designed for four primary user groups: **Parents**, **Students**, **Bus Drivers**, and **Administrators**. Parents can register students, book bus services, monitor trip status, and track bus locations. Students are issued digital QR bus passes used for attendance verification.
 
-Bus drivers use the application to view assigned routes and student lists, scan QR codes to record attendance, and update trip status. Administrators manage buses, drivers, routes, bookings, attendance, and payment records through administrative interfaces.
+Bus drivers use the system to start trips, scan student QR codes, and share live bus location updates. Administrators manage drivers, buses, routes, attendance records, and student bookings through administrative interfaces.
 
 ---
 
 ## 6. Final User Interface Screens and Explanation
 
-### 6.1 Login Screen
+### 6.1 Login Page
 
-The login screen is the entry point of the application and supports role-based access for administrators, drivers, parents, and students. Users are required to log in using their email and password. Based on the selected role, users are redirected to their respective dashboards.
+![Login Page](docs/diagrams/login page.png)
 
-This approach ensures secure access control and prevents unauthorized users from accessing system features that are not relevant to their role.
+The login page serves as the main entry point of the SchoolNow application. It provides role-based authentication for administrators, drivers, students, and parents using email and password credentials. Each role has a dedicated login option to ensure that users are redirected to the appropriate dashboard.
 
----
-
-### 6.2 Parent Dashboard
-
-The parent dashboard acts as the main control panel for parents. It displays relevant information such as student details, booking status, trip progress, and payment records. Parents can easily navigate to features such as bus booking, live tracking, and attendance history.
-
-This dashboard is designed to improve transparency and provide parents with peace of mind regarding their child’s daily transportation activities.
+This design enhances system security while simplifying the user experience by ensuring that users only access features relevant to their role.
 
 ---
 
-### 6.3 Student Registration Screen
+### 6.2 Driver & Admin Dashboard
 
-The student registration screen allows parents to register their children into the system by entering personal information such as name, age, and login credentials. Once registered, the student is linked to the transportation services available in the system.
+![Dashboard Admin](docs/diagrams/dashboard admin.png)
 
-This digital registration process eliminates paper-based forms and reduces errors associated with manual data entry.
+The Driver & Admin Dashboard functions as the central control panel for both drivers and administrators. Drivers can start trips and scan student QR codes, while administrators can access management features such as adding drivers and buses.
 
----
-
-### 6.4 Bus Booking Screen
-
-The bus booking screen enables parents to select a suitable bus route, driver, bus, and subscription duration for their child. The system automatically calculates and records the booking details.
-
-This feature simplifies the booking process and ensures accurate route and fare assignment while maintaining a complete digital record of all bookings.
+This unified dashboard reduces interface complexity while supporting multiple operational roles within the system.
 
 ---
 
-### 6.5 Digital Student Bus Pass (QR Code)
+### 6.3 Add New Driver Screen
 
-Each registered student is assigned a unique QR code that functions as a digital bus pass. The QR code must be shown to the driver during boarding and alighting.
+![Add New Driver](docs/diagrams/add new driver.png)
 
-This feature replaces manual attendance taking and ensures fast, accurate, and secure identification of students, thereby enhancing safety and accountability.
+This screen allows administrators to register new bus drivers by entering details such as full name, phone number, and license number. All driver information is stored centrally within the system.
 
----
-
-### 6.6 Driver QR Scanner Screen
-
-The QR scanner screen is used by bus drivers to scan student QR codes during boarding and drop-off. Upon successful scanning, attendance records are automatically stored in the system database.
-
-This automation reduces human error and ensures reliable tap-in and tap-out attendance tracking.
+Digitizing driver registration improves fleet management and ensures that only verified drivers are assigned to transportation services.
 
 ---
 
-### 6.7 Attendance Monitoring Screen (Administrator)
+### 6.4 Add New Bus Screen
 
-Administrators can view attendance records through the attendance monitoring screen. The system displays student attendance status such as present, absent, or unknown.
+![Add New Bus](docs/diagrams/add new bus.png)
 
-This feature enables centralized attendance management and supports monitoring, verification, and reporting activities.
+The Add New Bus screen enables administrators to register buses by entering the plate number, seating capacity, bus type, and assigned driver.
 
----
-
-### 6.8 Live Bus Location Tracking
-
-The live tracking screen displays the real-time location of the bus using map integration. Parents can monitor the bus movement during pickup and drop-off times.
-
-This feature enhances safety, reduces uncertainty, and improves communication between parents and drivers.
+This feature allows efficient fleet organization and ensures proper assignment of buses to routes and drivers.
 
 ---
 
-### 6.9 Administrative Management Screens
+### 6.5 Add New Bus Route Screen
 
-Administrators are provided with interfaces to add and manage drivers, buses, and routes. These screens allow administrators to input and update operational data such as driver information, bus details, route locations, estimated travel time, and fare prices.
+![Add New Route](docs/diagrams/add new route.png)
 
-Centralizing these functions improves operational efficiency and data accuracy.
+Administrators use this screen to define transportation routes by entering route name, start location, end location, estimated travel time, and fare price.
+
+Centralized route management supports accurate fare calculation and effective route planning.
 
 ---
 
-## 7. Summary of Achieved Features
+### 6.6 Student Bus Booking Screen
 
-The SchoolNow system successfully implements student registration, digital bus booking, QR-based attendance tracking, real-time bus location monitoring, and role-based system access. All core functionalities planned for the project have been implemented and tested in the final version of the application.
+![Bus Booking](docs/diagrams/bus booking.jpeg)
+
+Parents use this screen to book bus services for their children by selecting the registered child, route, driver, bus, and subscription duration. The system automatically calculates the total fare.
+
+This simplifies the booking process and ensures accurate and consistent transportation records.
+
+---
+
+### 6.7 View Student Bookings
+
+![View Booking](docs/diagrams/view booking.png)
+
+This screen displays all student bookings, including route, duration, fare, and booking status. It is used by administrators and drivers to monitor transportation demand and booking records.
+
+---
+
+### 6.8 Student Bus Pass (QR Code)
+
+![Student QR](docs/diagrams/parent - student bas pass (QR).jpeg)
+
+Each student is assigned a unique QR code that functions as a digital bus pass. The QR code is shown to the driver during boarding and alighting.
+
+This QR-based identification replaces manual attendance taking and supports automated attendance tracking.
+
+---
+
+### 6.9 Scan Student QR Screen
+
+![Scan Student QR](docs/diagrams/qr code.png)
+
+Bus drivers use this screen to scan student QR codes. Upon successful scanning, attendance data is automatically recorded and synchronized with the system.
+
+This automation reduces human error and ensures accurate tap-in and tap-out attendance tracking.
+
+---
+
+### 6.10 Trip Status Screen (Parent)
+
+![Trip Status](docs/diagrams/parent - trip status.jpeg)
+
+The Trip Status screen allows parents to view their child’s current transportation status, such as “On Board (In Bus),” along with the last updated timestamp.
+
+This feature provides transparency and reassures parents regarding their child’s safety.
+
+---
+
+### 6.11 Live Bus Tracking Screen
+
+![Live Tracking](docs/diagrams/parent bus live tracking.jpeg)
+
+This screen displays the real-time location of the bus using map integration. Parents can monitor the bus movement during pickup and drop-off.
+
+Live tracking improves safety and reduces uncertainty for parents.
+
+---
+
+### 6.12 Student Registration Screen
+
+![Student Registration](docs/diagrams/parent - new student registration.jpeg)
+
+Parents use this screen to register their children by entering personal details and login credentials.
+
+This digital registration process eliminates paperwork and improves data accuracy.
+
+---
+
+### 6.13 Check Student Attendance (Admin)
+
+![Check Attendance](docs/diagrams/check student attendance.png)
+
+Administrators use this screen to view student attendance records based on QR scanning activities.
+
+This ensures centralized attendance monitoring and reliable transportation records.
+
+---
+
+## 7. System Design Diagrams and Explanation
+
+### 7.1 Use Case Diagram
+
+![Use Case Diagram](docs/diagrams/use_case_diagram.jpg)
+
+The use case diagram illustrates interactions between users and system functions, clearly defining the responsibilities of parents, students, drivers, and administrators.
+
+---
+
+### 7.2 Sequence Diagram
+
+![Sequence Diagram](docs/diagrams/sequence_diagram.jpg)
+
+The sequence diagram demonstrates the interaction flow during QR-based attendance tracking, from QR scanning to attendance update and parent notification.
+
+---
+
+### 7.3 System Flowchart
+
+![System Flowchart](docs/diagrams/flowchart.jpg)
+
+The system flowchart provides a high-level overview of the system logic from login to trip completion, illustrating decision points and system processes.
 
 ---
 
 ## 8. Technical Explanation
 
-SchoolNow follows a client–cloud architecture. The frontend is developed using Flutter, while backend services handle authentication, data storage, and real-time updates. QR code technology is used for attendance verification, and map services are integrated for live tracking.
+SchoolNow follows a **client–cloud architecture**. The frontend is developed using **Flutter**, while backend services handle authentication, data storage, and real-time updates. QR code technology is used for attendance verification, and map services support live tracking.
 
-Role-based access control ensures that each user only interacts with features relevant to their role. Attendance data, booking records, and trip status updates are stored centrally to support real-time synchronization across devices.
+Role-based access control ensures secure and appropriate feature access.
 
 ---
 
 ## 9. Limitations
 
-Despite its successful implementation, the system has some limitations. The current version does not integrate a real online payment gateway, and payment records are simulated. The system also requires an active internet connection for live tracking and data synchronization. Additionally, reporting and analytics features are limited, and the system currently supports only a single-school deployment.
+The system does not currently integrate a real online payment gateway. Live tracking requires an internet connection, and reporting features are limited. The system supports only single-school deployment.
 
 ---
 
 ## 10. Future Enhancements
 
-Future improvements may include integration with real payment gateways, push notification alerts for parents, advanced reporting and analytics, multi-school deployment support, route optimization features, and iOS platform support.
+Future improvements include payment gateway integration, push notifications, advanced analytics, multi-school deployment, route optimization, and iOS support.
 
 ---
 
 ## 11. Conclusion
 
-The Automated School Bus System (ASBS) demonstrates how mobile technology can be used to improve school transportation services. By integrating QR-based attendance, automated fare records, and real-time tracking, the system enhances safety, reduces human error, and improves operational efficiency.
-
-SchoolNow provides a reliable and transparent solution that benefits parents, students, drivers, and administrators, and it has strong potential for further enhancement and real-world deployment.
-
+The Automated School Bus System (ASBS) demonstrates how mobile technology can improve school transportation safety and efficiency. Through QR-based attendance, digital booking, and live tracking, SchoolNow provides a reliable and transparent solution for school transportation management.
