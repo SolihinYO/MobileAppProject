@@ -175,24 +175,7 @@ This ensures centralized attendance monitoring and reliable transportation recor
 
 ---
 
-
-### 7.2 Sequence Diagram
-
-![Sequence Diagram](docs/diagrams/sequence_diagram.jpg)
-
-The sequence diagram demonstrates the interaction flow during QR-based attendance tracking, from QR scanning to attendance update and parent notification.
-
----
-
-### 7.3 System Flowchart
-
-![System Flowchart](docs/diagrams/flowchart.jpg)
-
-The system flowchart provides a high-level overview of the system logic from login to trip completion, illustrating decision points and system processes.
-
----
-
-## 8. Technical Explanation
+## 7. Technical Explanation
 
 SchoolNow follows a **client–cloud architecture**. The frontend is developed using **Flutter**, while backend services handle authentication, data storage, and real-time updates. QR code technology is used for attendance verification, and map services support live tracking.
 
@@ -200,18 +183,34 @@ Role-based access control ensures secure and appropriate feature access.
 
 ---
 
-## 9. Limitations
+## 8. Limitations
 
-The system does not currently integrate a real online payment gateway. Live tracking requires an internet connection, and reporting features are limited. The system supports only single-school deployment.
+Although the SchoolNow – Automated School Bus System (ASBS) has fulfilled the prime goals, there are some limitations observed during development and testing phases. One of the main limitations is that there is no functional online payment system available. Although there is provision for calculation and booking details, the payment system is only simulated and is not linked to any real-world e-wallet and banking system.
+
+Another is that it is dependent on a stable internet connection. This is because functions such as real-time tracking of bus routes, attendance synchronization through QR codes, and real-time statuses are dependent on a stable internet connection, and if not, there may be delays in data updates.
+
+Further, the current version of the system is designed for single-school implementation. The data of all students, routes, buses, and drivers are organized in a centralized fashion, which makes it unsuitable for multi-school implementation without further improvements.
+
+The reporting and analysis facilities are also limited. Although the administration is able to access the data of attendances and bookings, the facilities for detailed analysis of attendances, routes, and past reporting have not been incorporated as yet. Finally, the application is currently designed only for the Android environment, and it is not tested or optimized for cross-platform support on the iOS environment.
 
 ---
 
-## 10. Future Enhancements
+## 9. Future Enhancements
 
-Future improvements include payment gateway integration, push notifications, advanced analytics, multi-school deployment, route optimization, and iOS support.
+The following factors provide a brief insight into some of the improvements which could be made in the SchoolNow system in a bid to enhance its functionality and usage capabilities. One of the key improvements which could be made in the SchoolNow system is by ensuring there is a payment system within the software.
+
+Moreover, the functionality for push notifications could also be added. This would make communication even better. This would notify parents when the bus starts a journey, when a child boards or alights from the bus, as well as when a bus is late.
+
+Regarding scalability, the system could be developed to accommodate multi-school and district-level deployment. This will allow administrators to manage multiple schools, each with different buses, drivers, and routes, from one system. This will greatly enhance the potential of adoption of the system.
+
+Additionally, there could be enhanced reporting and analytical functionality to help in decision-making. Such functionality may include: analysis of trends in school attendance, analysis of routes to improve efficiency, analysis of drivers' performance, and graphical representation of historical data. In addition to this, there may be optimization of routes using GPS and traffic data to improve time and fuel efficiency.
 
 ---
 
-## 11. Conclusion
+## 10. Conclusion
 
-The Automated School Bus System (ASBS) demonstrates how mobile technology can improve school transportation safety and efficiency. Through QR-based attendance, digital booking, and live tracking, SchoolNow provides a reliable and transparent solution for school transportation management.
+The SchoolNow - Automated School Bus System (ASBS) is an example of using technology in the mobile application domain for increasing safety, efficacy, and transparency in school bus transportation services. The solution removes issues such as inaccuracy in attendance and booking systems, lack of real-time monitoring, and inefficient transportation management systems.
+
+By implementing QR-based attendance tracking systems, bus booking systems, and tracking systems for buses, SchoolNow offers numerous benefits for parents, students, drivers, as well as school administration. Parents gain increased confidence through real-time updates on their trips, while drivers find it convenient to record attendance.
+
+Despite some constraints, a sound platform has been set up for future upgrades. Future upgrades like the incorporation of a payment system, analytics, and support for multiple schools imply that SchoolNow has great potential to become a full-fledged platform for managing transportation in schools. On a whole, the project meets its requirements and shows how automated fare collection and mobile technology can be applied in a practical manner in an academic setup.
